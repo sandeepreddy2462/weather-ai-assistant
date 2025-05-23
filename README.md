@@ -126,8 +126,8 @@ weather-ai-assistant/
 
 ### 📦 Installation
 
-#### ✅ 1. Clone the repo
-```bash
+####1. clone the repo 
+```bash 
 git clone https://github.com/sandeepreddy2462/weather-ai-assistant.git
 cd weather-ai-assistant
 
@@ -138,6 +138,7 @@ npm install
 Required Backend Packages:
 npm install express cors body-parser dotenv axios openai
 npm install mongoose express-session connect-mongo
+
 
 📚 API Reference
 POST /generate-suggestions
