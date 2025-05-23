@@ -1,0 +1,22 @@
+.chatbot {
+  margin-top: 20px;
+  background-color: #f1faff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.chatbot h3 {
+  margin-bottom: 10px;
+  color: #007acc;
+}
+
+.chatbot ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.chatbot li {
+  margin: 6px 0;
+  font-size: 15px;
+}
