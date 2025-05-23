@@ -68,3 +68,77 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+# 🌦️ WeatherWise – AI-Powered Weather Assistant
+
+**WeatherWise** is a full-stack web application that provides real-time weather information along with smart, AI-generated suggestions based on current conditions. It also stores recent recommendations per user session using MongoDB.
+
+---
+
+## 🚀 Features
+
+- 🔍 **City-based & Location-based weather**
+- 🤖 **AI-generated lifestyle & travel tips** based on weather
+- 🧠 **Mock fallback mode** (no API cost or quota needed)
+- 🧭 Real-time weather via OpenWeatherMap API
+
+---
+
+## 🖥️ Tech Stack
+
+### Frontend
+- React.js
+- JavaScript, HTML, CSS
+- OpenWeatherMap API
+- React-Bootstrap or MUI Accordion (optional)
+
+### Backend
+- Node.js + Express
+- AI: OpenAI / Hugging Face / Mock fallback
+
+---
+
+## 📁 Project Structure
+
+weather-ai-assistant/
+├── client/ # React frontend
+│ └── src/
+├── server/ # Express backend
+│ ├── index.js
+│ ├── .env
+│ └── package.json
+├── README.md
+└── .gitignore
+
+---
+
+## ⚙️ Setup Instructions
+
+### 🔧 Prerequisites
+- Node.js
+- npm
+- OpenAI key (optional, fallback is supported)
+
+---
+
+### 📦 Installation
+
+#### ✅ 1. Clone the repo
+```bash
+git clone https://github.com/sandeepreddy2462/weather-ai-assistant.git
+cd weather-ai-assistant
+
+#### 2. Setup Backend
+cd server
+npm install
+
+Required Backend Packages:
+npm install express cors body-parser dotenv axios openai
+npm install mongoose express-session connect-mongo
+
+📚 API Reference
+POST /generate-suggestions
+Receives weather data and returns AI.
