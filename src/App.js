@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import Search from "./components/search/search";
-import CurrentWeather from "./components/current-weather/current-weather";
-import Forecast from "./components/forecast/forecast";
-import ChatBot from "./components/chatbot/chatbot";
-import { WEATHER_API_URL, WEATHER_API_KEY } from './api';
+import Search from "./components/search/search.js";
+import CurrentWeather from "./components/current-weather/current-weather.js";
+import Forecast from "./components/forecast/forecast.js";
+import ChatBot from "./components/chatbot/chatbot.js";
+import { WEATHER_API_URL, WEATHER_API_KEY } from './api.js';
 import "./App.css";
 
 function App() {
