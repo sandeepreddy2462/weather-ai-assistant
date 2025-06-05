@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { WEATHER_API_URL, WEATHER_API_KEY } from "./api";
+import { WEATHER_API_URL, WEATHER_API_KEY } from "../../api";
 import "./search.css";
 
 const Search = ({ onSearchChange }) => {
