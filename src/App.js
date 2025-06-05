@@ -3,7 +3,6 @@ import Search from "./components/search/search";
 import CurrentWeather from "./components/current-weather/current-weather";
 import Forecast from "./components/forecast/forecast";
 import ChatBot from "./components/chatbot/chatbot";
-import { WEATHER_API_KEY } from "./api";
 import { WEATHER_API_URL, WEATHER_API_KEY } from './api';
 import "./App.css";
 
