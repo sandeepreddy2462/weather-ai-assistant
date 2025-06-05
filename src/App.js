@@ -4,6 +4,7 @@ import CurrentWeather from "./components/current-weather/current-weather";
 import Forecast from "./components/forecast/forecast";
 import ChatBot from "./components/chatbot/chatbot";
 import { WEATHER_API_KEY } from "./api";
+import { WEATHER_API_URL, WEATHER_API_KEY } from './api';
 import "./App.css";
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
       );
       const weatherData = await weatherRes.json();
+      console.log(weatherData);
 
       setLocalWeather({ city: cityLabel, ...weatherData });
 
@@ -108,9 +110,6 @@ function App() {
 }, []);
 
 
-
-
-
 // AI SUGGESTIONS
 const fetchAISuggestions = async (weatherData) => {
   try {
@@ -129,7 +128,6 @@ const fetchAISuggestions = async (weatherData) => {
     return [];
   }
 };
-
 
 
 
