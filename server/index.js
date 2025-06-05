@@ -21,13 +21,19 @@ app.post('/generate-suggestions', async (req, res) => {
   console.log("Received Weather Data:", weatherData);
 
   try {
-          const prompt = `You are a weather assistant. Based on the weather data below, suggest 3 to 5 practical, helpful tips for a person. Weather Data:
-          ${JSON.stringify(weatherData, null, 2)} and city name: ${weatherData.name} Instructions:
-      - Suggestions should be in plain English.
-      - Consider temperature, weather condition, wind, and humidity.
-      - Suggest clothing, items to carry, and lifestyle tips.
-      - Suggest about the places to visit based on the weather according to city name.
-      - Respond only with a JSON array of strings.`;
+          const prompt = `You are a weather assistant. Based on the weather data below, suggest 3 to 5 practical tips for a person.
+
+Weather Data:
+${JSON.stringify(weatherData, null, 2)}
+City: ${weatherData.name}
+
+Instructions:
+- Respond **only** with a valid JSON array of strings (no extra text).
+- Each suggestion should be a complete sentence.
+- Consider temperature, condition, wind, and humidity.
+- Suggest clothing, things to carry, activities, and places to visit.
+- Format exactly like: ["Suggestion 1", "Suggestion 2", "Suggestion 3"]`;
+
 
     const chat = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
@@ -35,17 +41,21 @@ app.post('/generate-suggestions', async (req, res) => {
       temperature: 0.7,
     });
       
-    const aiContent = chat.choices[0].message.content;
+    const aiContent = chat.choices[0].message.content.trim();
     console.log("AI Raw Content:", aiContent);
 
     try {
       const suggestions = JSON.parse(aiContent);
-      res.json({ suggestions });
+      if (Array.isArray(suggestions)) {
+        res.json({ suggestions });
+      } else {
+        throw new Error("Response is not a JSON array");
+      }
     } catch (parseError) {
       console.error("JSON parse error:", parseError);
       res.status(500).json({
         error: "AI response was not valid JSON",
-        raw: aiContent
+        raw: aiContent,
       });
     }
 
