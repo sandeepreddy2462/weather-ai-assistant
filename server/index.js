@@ -3,9 +3,8 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const OpenAI = require('openai');
 const axios = require('axios');
-require('dotenv').config();
-config(); // Load .env
-
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 app.use(cors());
