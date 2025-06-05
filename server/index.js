@@ -1,10 +1,11 @@
-import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import OpenAI from 'openai';
-import axios from 'axios';
-import { config } from 'dotenv';
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const OpenAI = require('openai');
+const axios = require('axios');
+require('dotenv').config();
 config(); // Load .env
+
 
 const app = express();
 app.use(cors());
