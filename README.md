@@ -53,7 +53,7 @@ weather-ai-assistant/
 ### 📦 Installation
 
 ####1. clone the repo 
-```bash 
+
 git clone https://github.com/sandeepreddy2462/weather-ai-assistant.git
 cd weather-ai-assistant
 
@@ -68,7 +68,7 @@ npm install mongoose express-session connect-mongo
 
 📚 API Reference
 POST /generate-suggestions
-Receives weather data and returns AI.```
+Receives weather data and returns AI.
 
 ---
 
