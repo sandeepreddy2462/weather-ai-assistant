@@ -68,7 +68,7 @@ npm install mongoose express-session connect-mongo
 
 📚 API Reference
 POST /generate-suggestions
-Receives weather data and returns AI.
+Receives weather data and returns AI.```
 
 ---
 
